@@ -157,17 +157,37 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, err => {
-        if (err) {
-            return console.log(err);
-        }
-        console.log('The markdown file has been created')
+const writeFile = fileContent => {
+    return new Promise((resolve, reject) => {
+        fs.writeFile(`./generated-files/generated-readme.md`, fileContent, err => {
+            if (err) {
+             return console.log(err);
+            }
+            console.log('The markdown file has been created')
+        });
     });
-}
+};
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    return inquirer.prompt(questions)
+    .then(readmeData => {
+        return readmeData;
+    });
+};
 
 // Function call to initialize app
-init();
+init()
+    .then(readmeData => {
+        console.log(readmeData);
+        return generateMarkdown(readmeData);
+    })
+    .then(pageMarkdown => {
+        return writeFile(pageMarkdown);
+    })
+    .then(writeFileResponse => {
+        console.log(writeFileResponse.message);
+    })
+    .catch(err => {
+        console.log(err);
+    });

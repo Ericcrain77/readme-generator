@@ -24,22 +24,56 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
+function renderLicenseTOC(license) {
+  if (license !== 'no license') {
+  return `
+  * [License](#license)
+    `;
+  } else {
+    return ' ';
+  }
+}
+
+// Returns license in table of contents
 function renderLicenseSection(license) {
   if (license !== 'no license') {
     return `
     ## [License](#table-of-contents)
+
     The application is covered under the following license:
+
     ${renderLicenseLink(license)}
       `;
     } else {
-      return ' ';
+      return '';
     }
+}
+
+// Function to return contributors
+function renderContributingSection(confirmContributers, data) {
+  if (!confirmContributers) {
+    return `
+  I will not be accepting help from contributors.
+    `;
+  } else {
+    return `
+  ${data}
+    `;
+  }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return 
-  `# ${data.title}
+  return `
+  # ${data.title}
+
+  ## [Description](#table-of-contents)
+
+  ${data.what}
+
+  ${data.why}
+
+  ${data.how}
 
   ${renderLicenseBadge(data.license)}
 
@@ -53,13 +87,6 @@ function generateMarkdown(data) {
   * [Tests](#tests)
   * [Questions](#questions)
   
-  ## [Description](#table-of-contents)
-
-  ${data.what}
-
-  ${data.why}
-
-  ${data.how}
 
   ## [Installation](#table-of-contents)
 
@@ -88,7 +115,7 @@ function generateMarkdown(data) {
   Please contact me using the following links:
   [GitHub](https://github.com/${data.githubUsername})
   [Email: ${data.email}](mailto:${data.email})
-`;
+  `;
 }
 
 module.exports = generateMarkdown;
