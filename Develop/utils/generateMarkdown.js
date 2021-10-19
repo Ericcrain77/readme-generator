@@ -109,7 +109,9 @@ function generateMarkdown(data) {
   ## [Questions](#table-of-contents)
 
   Contact me:
+
   [GitHub](https://github.com/${data.githubUsername})
+  
   [Email: ${data.email}](mailto:${data.email})
   `;
 }
