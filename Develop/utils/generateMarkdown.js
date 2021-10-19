@@ -40,7 +40,7 @@ function renderLicenseSection(license) {
     return `
     ## [License](#table-of-contents)
 
-    The application is covered under the following license:
+    Covered under the following license:
 
     ${renderLicenseLink(license)}
       `;
@@ -96,10 +96,6 @@ function generateMarkdown(data) {
 
   ${data.usage}
   
-  For more information on how to add screenshots for examples, visit the following website:
-  
-  [Mark Down Tutorial](https://agea.github.io/tutorial.md/)
-  
   ${renderLicenseSection(data.license)}
 
   ## [Contributing](#table-of-contents)
@@ -112,7 +108,7 @@ function generateMarkdown(data) {
   
   ## [Questions](#table-of-contents)
 
-  Please contact me using the following links:
+  Contact me:
   [GitHub](https://github.com/${data.githubUsername})
   [Email: ${data.email}](mailto:${data.email})
   `;

@@ -8,7 +8,7 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'What is the title of your project?',
+        message: 'Title of your project?',
         validate: titleInput => {
             if (titleInput) {
                 return true;
@@ -21,7 +21,7 @@ const questions = [
     {
         type: 'input',
         name: 'githubUsername',
-        message: 'What is your GitHub Username?',
+        message: 'GitHub Username',
         validate: githubInput => {
             if (githubInput) {
                 return true;
@@ -34,7 +34,7 @@ const questions = [
     {
         type: 'input',
         name: 'email',
-        message: 'What is your email address?',
+        message: 'Email address',
         validate: githubInput => {
             if (githubInput) {
                 return true;
@@ -47,7 +47,7 @@ const questions = [
     {
         type: 'input',
         name: 'details',
-        message: 'What is your project and what problem will it solve?',
+        message: 'Detail your project',
         validate: detailsInput => {
             if (detailsInput) {
                 return true;
@@ -60,7 +60,7 @@ const questions = [
     {
         type: 'input',
         name: 'why',
-        message: 'Why did you create this project?',
+        message: 'What is the purpose of this project?',
         validate: whyInput => {
             if (whyInput) {
                 return true;
@@ -73,7 +73,7 @@ const questions = [
     {
         type: 'input',
         name: 'how',
-        message: 'How will someone use this?',
+        message: 'How will this project be used?',
         validate: howInput => {
             if (howInput) {
                 return true;
@@ -86,7 +86,7 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'Please provide step-by-step installation instructions for your project.',
+        message: 'Step-by-step installation instructions',
         validate: installInput => {
             if (installInput) {
                 return true;
@@ -99,7 +99,7 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Please provide examples for use.',
+        message: 'Examples',
         validate: usageInput => {
             if (usageInput) {
                 return true;
@@ -118,13 +118,13 @@ const questions = [
     {
         type: 'confirm',
         name: 'confirmContributers',
-        message: 'Would you like to allow other developers to contribute?',
+        message: 'Allow other contributors?',
         default: true
     },
     {
         type: 'input',
         name: 'contribute',
-        message: 'Please provide guidelines for others to contribute.',
+        message: 'Guidelines for others to contribute',
         when: ({ confirmContributers }) => {
             if (confirmContributers) {
                 return true;
@@ -144,7 +144,7 @@ const questions = [
     {
         type: 'input',
         name: 'test',
-        message: 'Please provide instructions on how to test the app.',
+        message: 'Instructions on how to test the application',
         validate: testInput => {
             if (testInput) {
                 return true;
