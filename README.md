@@ -5,16 +5,16 @@ An open source project in GitHub to generate professional looking Readme.md file
 
 ## Screenshots
 index.JS and Terminal
-![index.JS and Terminal](/develop/utils/images/index.js_and_terminal.jpg)
+![index.JS and Terminal](/Develop/utils/images/index.js_and_terminal.jpg)
 
 generateMarkdown.js and Terminal
-![generateMarkdown.js and Terminal](/develop/utils/images/generateMarkdown.js_and_terminal.jpg)
+![generatedMarkdown.js and Terminal](/Develop/utils/images/generateMarkdown.js_and_terminal.jpg)
 
 Generated Markdown File
-![Generated Markdown File](/develop/utils/images/generated_markdown_file.jpg)
+![Generated Markdown File](/Develop/utils/images/generated_markdown_file.jpg)
 
 Preview of ReadMe.md
-![Preview of ReadMe.md](/develop/utils/images/preview_of_readme.jpg)
+![Preview of ReadMe.md](/Develop/utils/images/preview_of_readme.jpg)
 
 ## Repository Link
 https://github.com/Ericcrain77/readme-generator
